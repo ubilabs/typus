@@ -29,7 +29,7 @@
   </div>
 <% end %>
 
-<% if @items.any? -%>
+<% if @items.all.any? -%>
   <%= build_list(@resource, fields, @items) %>
   <%= will_paginate(@items, Typus.pagination) %>
 <% else %>
